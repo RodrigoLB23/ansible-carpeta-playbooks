@@ -1,0 +1,10 @@
+---
+- name: Crear carpeta en servidor
+  hosts: all
+  become: yes
+  tasks:
+    - name: Crear carpeta 'semaphore'
+      file:
+        path: "/home/ssati001/semaphore"
+        state: directory
+        mode: '0755'
